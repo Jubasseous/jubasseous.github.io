@@ -9,6 +9,7 @@
 }
 
 .typewriter p{
+    color: black;
     font-family: monospace;
     font-size: 1.5rem;
     margin-inline: auto;
