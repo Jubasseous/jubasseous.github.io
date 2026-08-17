@@ -3006,6 +3006,7 @@ input, select, textarea {
 		.spotlights > section > .image {
 			background-position: center center;
 			background-size: cover;
+			object-fit: contain
 			border-radius: 0;
 			display: block;
 			position: relative;
