@@ -1,12 +1,39 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Exo 2", sans-serif;
-}
-
 #title{
     color: rebeccapurple;
+}
+
+.typewriter{
+    display: flex;
+    justify-content: center;
+}
+
+.typewriter p{
+    font-family: monospace;
+    font-size: 1.5rem;
+    margin-inline: auto;
+    overflow: hidden;
+    /*Keeps on single line*/
+    white-space: nowrap;
+    /*cursor*/
+    border-right: 1px solid;
+    /*steps = number of chars*/
+    animation: typing 3s steps(22) forwards,
+    blink 1s step-end infinite;
+}
+
+@keyframes typing{
+    from{
+        width: 0;
+    }
+
+    to{
+        width: 100%;
+    }
+}
+
+@keyframes blink{
+    50%{
+        border-color: transparent;
+    }
 }
