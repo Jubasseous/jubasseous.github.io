@@ -1,12 +1,42 @@
 /*typewriter*/
 
-.typewriter{
+/*.typewriter{
     display: flex;
     justify-content: center;
 }
 
 .typewriter h1 {
     color: black;
+    font-family: "Poppins", sans-serif;
+    font-size: 3.5rem;
+    letter-spacing: 0.05em;
+    margin-inline: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 1px solid;
+    animation: typing 3s steps(22) forwards,
+               blink 1s step-end infinite;
+}*/
+
+:root {
+    --text-color: #261F4B;
+}
+
+body.dark {
+    --text-color: #F1F0FF;
+}
+
+.typewriter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+}
+
+.typewriter h1 {
+    color: var(--text-color);
     font-family: "Poppins", sans-serif;
     font-size: 3.5rem;
     letter-spacing: 0.05em;
