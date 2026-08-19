@@ -17,7 +17,8 @@
     --toggle-color: #DDDD;
     --text-color: #707070;*/
 
-    --body-color: #e4e9f7;
+    --body-color: #e6e0ff;
+    --background-color: #C0B1F4;
     --sidebar-color: #727CDB;
     --primary-color: #695cfe;
     --primary-color-light: #8f96db;
@@ -59,14 +60,16 @@
 body {
     height: 100vh;
     background: var(--body-color);
+    transition: var(--tran-05);
 }
 
 body.dark{
     --body-color: #181827;
+    --background-color:#181827;
     --sidebar-color: #252442;
     --primary-color: #8B7CFF;
     --primary-color-light: #6F68B8;
-    --toggle-color: #6B7280;
+    --toggle-color: #9CA3AF;
     --text-color: #F1F0FF;
     --searchbar-color: #2E2D46;
     --searchtext-color:#A1A1AA;
@@ -79,9 +82,15 @@ body.dark{
     top: 0;
     left: 0;
     height: 100%;
-    width: 250px;
+    width: 270px;
     padding: 10px 14px;
     background: var(--sidebar-color);
+    transition: var(--tran-05);
+    z-index: 100;
+}
+
+.sidebar.close{
+    width: 108px;
 }
 
 /* ======== Resuable CSS =============*/
@@ -89,6 +98,13 @@ body.dark{
     font-size: 16px;
     font-weight: 500;
     color: var(--text-color);
+    transition: var(--tran-03);
+    white-space: nowrap;
+    opacity: 1;
+}
+
+.sidebar.close .text{
+    opacity: 0;
 }
 
 .sidebar .image{
@@ -98,8 +114,8 @@ body.dark{
 }
 
 .sidebar li{
-    height: 80px;
-    margin-top: 10px;
+    height: 60px;
+    margin-top: 30px;
     list-style: none;
     display: flex;
     align-items: center;
@@ -109,8 +125,8 @@ body.dark{
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 60px;
-    font-size: 30px;
+    min-width: 80px;
+    font-size: 40px;
 }
 .sidebar li .icon,
 .sidebar li .text{
@@ -154,8 +170,8 @@ body.dark{
 .sidebar header .toggle {
     position: absolute;
     top: 50%;
-    right: -25px;
-    transform: translateY(-50%);
+    right: -30px;
+    transform: translateY(-50%) rotate(180deg);
     height: 35px;
     width: 35px;
     background: var(--primary-color);
@@ -165,11 +181,23 @@ body.dark{
     border-radius: 50%;
     color: var(--text-color);
     font-size: 32px;
+    transition: var(--tran-03);
+    cursor: pointer;
+}
+
+.sidebar.close header .toggle {
+    transform: translateY(-50%) rotate(0deg);
+    transition: var(--tran-03);
+}
+
+body.dark .sidebar header .toggle{
+    color: var(--text-color);
 }
 
 .sidebar .search-box {
     background: var(--primary-color-light);
     border-radius: 6px;
+    transition: var(--tran-05);
 }
 
 .search-box input {
@@ -179,16 +207,20 @@ body.dark{
     border: none;
     border-radius: 6px;
     background: var(--primary-color-light);
+    transition: var(--tran-05);
 }
 
 input[type="search"] {
     background-color: var(--primary-color-light); /* #2E2D46 */
     color: var(--text-color);                  /* #F1F0FF */
+    transition: var(--tran-05);
 }
 
 input[type="search"]::placeholder {
     /*color: #9CA3AF;*/
     color: var(--searchtext-color);
+    transition: var(--tran-05);
+
 }
 .sidebar li a {
     height: 100%;
@@ -209,6 +241,10 @@ input[type="search"]::placeholder {
     color: var(--primary-color-light);
 }
 
+body.dark .sidebar li a:hover .icon,
+body.dark .sidebar li a:hover .text{
+    color: var(--text-color);
+}
 .sidebar .menu-bar{
     height: calc(100% - 90px);
     display: flex;
@@ -217,38 +253,58 @@ input[type="search"]::placeholder {
 }
 
 .menu-bar .mode {
-    background: var(--primary-color-light);
+    position: relative;
     border-radius: 6px;
+    background: var(--primary-color-light);
+}
+
+.mode-text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
 }
 
 .menu-bar .mode .moon-sun{
     height: 50px;
-    width:60px;
+    width: 60px;
     display: flex;
     align-items: center;
 }
 
 .menu-bar .mode i{
     position: absolute;
+    transition: var(--tran-03);
 }
 
 .menu-bar .mode i.sun{
     opacity: 0;
 }
 
+body.dark .menu-bar .mode i.sun{
+    opacity: 1;
+}
+
+body.dark .menu-bar .mode i.moon {
+    opacity: 0;
+}
+
 .menu-bar .mode .toggle-switch{
-   display:flex;
+   position: absolute;
+   right: 10px;
+   display: flex;
    align-items: center;
    justify-content: center;
    height: 100%;
    min-width: 60px;
    cursor: pointer;
+   border-radius: 6px;
+   background: var(--primary-color-light);
 }
 
 .toggle-switch .switch{
     position: relative;
-    height: 22px;
-    width: 44px;
+    height: 26px;
+    width: 48px;
     border-radius: 25px;
     background: var(--toggle-color);
 }
@@ -269,3 +325,40 @@ input[type="search"]::placeholder {
 body.dark .switch::before{
     left: 25px;
 }
+
+.home{
+    position: relative;
+    height: 100vh;
+    left: 270px;
+    width: calc(100% - 270px);
+    background: var(--body-color);
+    transition: var(--tran-05);
+
+}
+
+/*grid background*/
+.home {
+    background-color: #C0B1F4;
+    background-image: linear-gradient(rgba(105, 92, 254, 0.12) 1px, transparent 1px), linear-gradient(90deg, rgba(105, 92, 254, 0.12) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+body.dark .home {
+    background-color: #181827;
+    background-image: linear-gradient(rgba(139, 124, 255, 0.12) 1px, transparent 1px), linear-gradient(90deg, rgba(139, 124, 255, 0.12) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+.home .text{
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--text-color);
+    padding: 8px 40px;
+}
+.sidebar.close ~ .home{
+    left: 108px;
+    width: calc(100% - 108px);
+}
+
+
+
