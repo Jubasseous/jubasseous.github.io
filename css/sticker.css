@@ -1,12 +1,15 @@
 :root {
-    --tran-02: all 0.2s ease;
-    --tran-03: all 0.3s ease;
-    --tran-04: all 0.4s ease;
-    --tran-05: all 0.5s ease;
+    --darkpurple-color:      #24152f;
+    --brightpurple-color:    #9b5de5;
+    --lightpurple-color:      #eadcff;
+    --lavenderScreen-color:  #f4edff;
+    --niceblack-color: #222;
 
     --dur-2: 2s forwards;
 
     --size: 300px;
+    --game-openadjustment: 0px;
+    --game-closedadjustment: 10px;
 }
 
 .stickers {
@@ -41,32 +44,47 @@
         transform: translateY(0) rotate(var(--rotation));
     }
 }
-/*
 
+/*other landing page idea*/
 
-.sticker {
-    min-width: 60px;
+.exe-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: slide-up var(--dur-2);
+    position: relative;
+    transition: var(--tran-05);
 }
 
-.sticker img {
-    width: 300px;
-    height: auto;
+.game-screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: min(900px, 85vw);
+    min-height: 500px;
+
+    border: 8px solid var(--niceblack-color);
+    border-radius: 20px;
+    padding: 40px;
+
+    background: #c8d0a8;
+    box-shadow: 12px 12px 0 var(--niceblack-color);
+    position: relative;
+    transition: var(--tran-05);
 }
 
+/* Sidebar OPEN */
+.game-screen {
+    transform: translateX( calc( (var(--sidebar-width) - var(--sidebar-closedwidth)) / 2 + var(--game-closedadjustment) ) );
+}
 
+/* Sidebar CLOSED */
+.sidebar.close ~ .home .game-screen {
+    transform: translateX(var(--game-openadjustment));
+}
 
-@keyframes slide-up{
-    from{
-        opacity: 0.2;
-        transform: translateY(200%);
-    }
-
-    to{
-        opacity: 1;
-        transform: translateY(0);
-    }
-}*/
+.dpad {
+    position: relative;
+    font-size: 100px;
+    left: 25%;
+    bottom: 25%;
+}

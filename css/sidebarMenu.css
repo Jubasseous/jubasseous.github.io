@@ -1,16 +1,9 @@
 :root {
     /*  Colors*/
-    /*--body-color: #e4e9f7;
-    --sidebar-color: #fff;
-    --primary-color: #695cfe;
-    --primary-color-light: #F6F5FF;
-    --toggle-color: #DDDD;
-    --text-color: #707070;*/
-
     --body-color: #e6e0ff;
     --background-color: #C0B1F4;
-    --purplegradient-color: #8B7CFF2B;
-    --slatebluegradient-color: #695CFE2B;
+    --purplegradient-color: #8B7CFFFF;
+    --slatebluegradient-color: #695CFEFF;
     --sidebar-color: #727CDB;
     --primary-color: #695cfe;
     --primary-color-light: #8f96db;
@@ -27,6 +20,9 @@
     --tran-03: all 0.3s ease;
     --tran-04: all 0.4s ease;
     --tran-05: all 0.5s ease;
+    /*Sidebar width*/
+    --sidebar-width: 270px;
+    --sidebar-closedwidth: 108px;
 }
 
 /*====Rounded Search==========*/
@@ -58,8 +54,8 @@ body {
 body.dark{
     --body-color: #181827;
     --background-color:#181827;
-    --purplegradient-color: #8B7CFF30;
-    --slatebluegradient-color: #6A5ACD30;
+    --purplegradient-color: #8B7CFFFF;
+    --slatebluegradient-color: #6A5ACDFF;
     --sidebar-color: #252442;
     --primary-color: #8B7CFF;
     --primary-color-light: #6F68B8;
@@ -360,13 +356,13 @@ body.dark .switch::before{
 
 .home {
     position: relative;
-    height: 90vh;
-    left: 270px;
-    width: calc(100% - 270px);
+    height: 85vh;
+    left: var(--sidebar-width);
+    width: calc(100% - var(--sidebar-width));
     background-color: var(--background-color);
     background-size: 40px 40px;
     /*creates a grid, direction, then color and background color in between grids*/
-    background-image: linear-gradient(to right, var(--purplegradient-color) 1px, transparent 1px), linear-gradient(to bottom, var(--slatebluegradient-color) 1px, transparent 1px);
+    background-image: linear-gradient(to right, var(--purplegradient-color) 2px, transparent 1px), linear-gradient(to bottom, var(--slatebluegradient-color) 2px, transparent 1px);
     transition: var(--tran-05);
 }
 
@@ -377,8 +373,8 @@ body.dark .switch::before{
     padding: 8px 40px;
 }
 .sidebar.close ~ .home{
-    left: 108px;
-    width: calc(100% - 108px);
+    left: var(--sidebar-closedwidth);
+    width: calc(100% - var(--sidebar-closedwidth));
 }
 
 
