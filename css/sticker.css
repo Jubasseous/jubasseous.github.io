@@ -1,12 +1,47 @@
-.root {
+:root {
     --tran-02: all 0.2s ease;
     --tran-03: all 0.3s ease;
     --tran-04: all 0.4s ease;
     --tran-05: all 0.5s ease;
 
-    --dur-2: 2s;
+    --dur-2: 2s forwards;
+
+    --size: 300px;
 }
 
+.stickers {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.sticker img {
+    width: var(--size);
+    height: auto;
+}
+
+.sticker {
+    position: absolute;
+    width: var(--size);
+    opacity: 0;
+    animation-name: sticker-rise;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes sticker-rise {
+    from {
+        opacity: 0;
+        transform: translateY(100vh) rotate(0deg);
+    }
+
+    to {
+        opacity: 0.75;
+        transform: translateY(0) rotate(var(--rotation));
+    }
+}
+/*
 
 
 .sticker {
@@ -14,15 +49,24 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: slide-up var(--dur-2);
 }
 
-.sticker img{
-    width: 400px;
+.sticker img {
+    width: 300px;
     height: auto;
 }
 
-@keyframes slideUp{
+
+
+@keyframes slide-up{
     from{
-        transform: translateY(300%);
+        opacity: 0.2;
+        transform: translateY(200%);
     }
-}
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}*/
