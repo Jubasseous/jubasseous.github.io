@@ -119,8 +119,8 @@ body.dark{
 }
 
 .sidebar li{
-    height: 60px;
-    margin-top: 30px;
+    height: 70px;
+    margin-top: 20px;
     list-style: none;
     display: flex;
     align-items: center;
@@ -150,26 +150,38 @@ body.dark{
     border-radius: 6px;
 }
 
-.sidebar .dark-light .dark-icon {
+.sidebar .dark-light {
+    position: relative;
+    min-width: 60px;
+    width: 80px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar .dark-light img {
     position: absolute;
-    left: 7px;
     width: 65px;
+    left: 65%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     border-radius: 6px;
-    opacity: 0;
     transition: var(--tran-03);
 }
 
-body.dark .dark-light .dark-icon {
+.sidebar .dark-light .dark-icon {
+    opacity: 0;
+}
+
+body.dark .sidebar .dark-light .dark-icon {
     opacity: 1;
 }
 
-body.dark .dark-light .light-icon {
+body.dark .sidebar .dark-light .light-icon {
     opacity: 0;
 }
 
-.sidebar .dark-light .light-icon {
-    transition: var(--tran-03);
-}
 .sidebar header .image-text{
     display: flex;
     align-items: center;
@@ -216,8 +228,9 @@ body.dark .sidebar header .toggle{
     color: var(--text-color);
 }
 
+/*margin from icon*/
 .sidebar .menu{
-    margin-top: 10px;
+    margin-top: -10px;
 }
 .sidebar .search-box {
     background: var(--primary-color-light);
@@ -238,13 +251,12 @@ body.dark .sidebar header .toggle{
 }
 
 input[type="search"] {
-    background-color: var(--primary-color-light); /* #2E2D46 */
-    color: var(--text-color);                  /* #F1F0FF */
+    background-color: var(--primary-color-light);
+    color: var(--text-color);                  
     transition: var(--tran-05);
 }
 
 input[type="search"]::placeholder {
-    /*color: #9CA3AF;*/
     color: var(--searchtext-color);
     transition: var(--tran-05);
 
@@ -356,34 +368,16 @@ body.dark .switch::before{
     left: 25px;
 }
 
-.home{
+.home {
     position: relative;
     height: 100vh;
     left: 270px;
     width: calc(100% - 270px);
-    background: var(--body-color);
-    transition: var(--tran-05);
-
-}
-
-/*grid background*/
-/*.home {
-    background-color: var(--background-color);
-    background-image: linear-gradient(var(--purplegradient-color) 1px, transparent 1px), linear-gradient(90deg, rgba(105, 92, 254, 0.12) 1px, transparent 1px);
-    background-size: 40px 40px;
-}
-
-body.dark .home {
-    background-color: var(--background-color);
-    background-image: linear-gradient(rgba(139, 124, 255, 0.12) 1px, transparent 1px), linear-gradient(90deg, rgba(139, 124, 255, 0.12) 1px, transparent 1px);
-    background-size: 40px 40px;
-}*/
-
-.home{
     background-color: var(--background-color);
     background-size: 40px 40px;
     /*creates a grid, direction, then color and background color in between grids*/
     background-image: linear-gradient(to right, var(--purplegradient-color) 1px, transparent 1px), linear-gradient(to bottom, var(--slatebluegradient-color) 1px, transparent 1px);
+    transition: var(--tran-05);
 }
 
 .home .text{

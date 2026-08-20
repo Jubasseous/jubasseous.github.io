@@ -1,0 +1,28 @@
+.root {
+    --tran-02: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
+
+    --dur-2: 2s;
+}
+
+
+
+.sticker {
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sticker img{
+    width: 400px;
+    height: auto;
+}
+
+@keyframes slideUp{
+    from{
+        transform: translateY(300%);
+    }
+}
