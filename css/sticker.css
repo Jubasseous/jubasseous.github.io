@@ -63,8 +63,8 @@
     /* align-items: center;
     justify-content: center;*/
     width: clamp(500px, 55vw, 900px);
-    height: clamp(300px, 55vh, 400px);
-    top: -20%;
+    height: clamp(250px, 40vh, 400px);
+    top: clamp(-200px, -18vh, -110px);
     border: 8px solid var(--text-color);
     border-radius: 20px;
     padding: 40px;
