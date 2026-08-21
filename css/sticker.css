@@ -8,8 +8,7 @@
     --dur-2: 2s forwards;
 
     --size: 300px;
-    --game-openadjustment: 0px;
-    --game-closedadjustment: 10px;
+    --game-adjustment: 10px;
 }
 
 .stickers {
@@ -53,38 +52,42 @@
     justify-content: center;
     position: relative;
     transition: var(--tran-05);
+    width: 100%;
+    height: 100%;
 }
 
 .game-screen {
     display: flex;
-    align-items: center;
-    justify-content: center;
+   /* align-items: center;
+    justify-content: center;*/
     width: min(900px, 85vw);
-    min-height: 500px;
+    min-height: 450px;
+    top: -130px;
 
-    border: 8px solid var(--niceblack-color);
+    border: 8px solid var(--text-color);
     border-radius: 20px;
     padding: 40px;
 
     background: #c8d0a8;
-    box-shadow: 12px 12px 0 var(--niceblack-color);
+    box-shadow: 12px 12px 0 var(--text-color);
     position: relative;
     transition: var(--tran-05);
 }
 
 /* Sidebar OPEN */
-.game-screen {
-    transform: translateX( calc( (var(--sidebar-width) - var(--sidebar-closedwidth)) / 2 + var(--game-closedadjustment) ) );
+.exe-container {
+    transform: translateX( calc( (var(--sidebar-width) - var(--sidebar-closedwidth)) / 2 + var(--game-adjustment) ) );
 }
 
 /* Sidebar CLOSED */
-.sidebar.close ~ .home .game-screen {
-    transform: translateX(var(--game-openadjustment));
+.sidebar.close ~ .home .exe-container {
+    transform: translateX(var(--game-adjustment));
 }
 
 .dpad {
     position: relative;
-    font-size: 100px;
-    left: 25%;
-    bottom: 25%;
+    font-size: 150px;
+    transform: translate(-1050px, 140px);
+    color: var(--text-color);
+
 }
