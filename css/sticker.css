@@ -62,9 +62,9 @@
     display: flex;
    /* align-items: center;
     justify-content: center;*/
-    width: min(900px, 85vw);
-    min-height: 450px;
-    top: -130px;
+    width: 55vw;
+    min-height: 55%;
+    top: -20%;
 
     border: 8px solid var(--text-color);
     border-radius: 20px;
@@ -78,12 +78,14 @@
 
 /* Sidebar OPEN */
 .exe-container {
-    transform: translateX( calc( (var(--sidebar-width) - var(--sidebar-closedwidth)) / 2 + var(--game-adjustment) ) );
+    left: 20%;
+    /* transform: translateX( calc( (var(--sidebar-width) - var(--sidebar-closedwidth)) / 2 + var(--game-adjustment) ) );*/
 }
 
 /* Sidebar CLOSED */
 .sidebar.close ~ .home .exe-container {
-    transform: translateX(var(--game-adjustment));
+    /*transform: translateX(var(--game-adjustment));*/
+    left: 10%;
 }
 
 .dpad {
