@@ -60,21 +60,20 @@
 
 .game-screen {
     display: flex;
-   /* align-items: center;
+    /* align-items: center;
     justify-content: center;*/
-    width: 55%;
+    width: clamp(500px, 55vw, 900px);
     min-height: 55%;
     top: -20%;
-
     border: 8px solid var(--text-color);
     border-radius: 20px;
     padding: 40px;
-
     background: var(--game-screen-color);
     box-shadow: 12px 12px 0 var(--text-color);
     position: relative;
     transition: var(--tran-05);
 }
+
 
 /* Sidebar OPEN */
 .exe-container {
@@ -88,10 +87,13 @@
     left: 10%;
 }
 
+
+
+
 .dpad {
     position: relative;
     font-size: 190px;
-    transform: translate(-1080px, 140px);
+    transform: translate(-550%, 80%);
     color: var(--game-border-color);
 
 }

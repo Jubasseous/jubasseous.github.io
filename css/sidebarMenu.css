@@ -47,6 +47,7 @@
 
 body {
     height: 100%;
+    box-sizing: border-box;
     background: var(--body-color);
     transition: var(--tran-05);
 }
