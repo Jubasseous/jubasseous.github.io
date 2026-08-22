@@ -380,7 +380,7 @@ body.dark .switch::before{
 }
 
 /*for phone*/
-/*@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .home {
         left: 0;
         width: 100%;
@@ -391,5 +391,5 @@ body.dark .switch::before{
         z-index: 100;
     }
 }
-*/
+
 
