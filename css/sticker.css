@@ -58,6 +58,7 @@
     height: 100%;
     transition: var(--tran-05);
     background-color: blue;
+    
 }
 
 .game-screen {
@@ -72,7 +73,7 @@
     padding: 40px;
     background: var(--game-screen-color);
     box-shadow: 12px 12px 0 var(--text-color);
-    position: absolute;
+    position: relative;
     transition: var(--tran-05);
 }
 
@@ -80,7 +81,7 @@
 
 .dpad {
     position: absolute;
-    font-size: 12em;
+    font-size: clamp(80px, 12vw, 190px);
     left: 9%;
     top: 70%;
     color: var(--game-border-color);
@@ -88,12 +89,16 @@
 
 .initial-buttons {
     position: absolute;
-    width: 5em;
-    right: 70%;
-    top: 0%;
-    transform: scale(0.15);
+    width: 5vw;
+    left: 82%;
+    top: 76%;
+    transform: scale(2);
 }
 
+.initial-buttons img {
+    width: 100%;
+    height: auto;
+}
 .pua {
     position: absolute;
     width: 50px;
