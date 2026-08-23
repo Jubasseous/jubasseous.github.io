@@ -72,6 +72,9 @@ body.dark {
     animation: typing 3s steps(22) forwards, blink 1s step-end infinite;
     align-content: center;
     justify-content: center;
+
+    top: 60%;
+    transform: translateY(80%);
 }
 
 @keyframes typing{

@@ -116,16 +116,38 @@
     white-space: nowrap;
     text-align: center;
     position: absolute;
+    justify-content: center;
     left: 50%;
     top: 90%;
     transform: translate(-50%, -90%);
-    outline-color: purple;
+    opacity: 0.6;
 }
 
-.game-screen .text h1 {
+.game-screen .intro-text p {
     font-family: "Jersey10", sans-serif;
-    font-size: clamp(16px, 4cqw, 30px);
+    color: var(--text-color);
+    font-size: clamp(1.5rem,calc(3vw - 1rem), 4rem);
     white-space: nowrap;
     text-align: center;
     position: absolute;
+    justify-content: center;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, -10%);
+    opacity: 0.6;
+}
+
+.game-screen .name h1 {
+    color: var(--text-color);
+    font-size: clamp(2.5rem,calc(4.5vw - 1rem), 4.5rem);
+    letter-spacing: 0.05em;
+   
+    white-space: nowrap;
+    text-align: center;
+    justify-content: center;
+    position: absolute;
+    top: 18%;
+    left: 25%;
+    transform: translateY(18%);
+    
 }
