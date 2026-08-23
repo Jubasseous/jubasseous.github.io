@@ -390,6 +390,10 @@ body.dark .switch::before{
     .sidebar {
         z-index: 100;
     }
+
+    .dpad{
+        top: 76%;
+    }
 }
 
 
