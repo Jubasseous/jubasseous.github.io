@@ -94,6 +94,7 @@
     transform: scale(2);
 }
 
+.dpad,
 .initial-buttons img,
 .pua img{
     display: block;
