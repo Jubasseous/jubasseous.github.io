@@ -82,7 +82,7 @@
     position: absolute;
     font-size: clamp(80px, 12vw, 190px);
     left: 9%;
-    top: 70%;
+    top: 76%;
     color: var(--game-border-color);
 }
 
