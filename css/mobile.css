@@ -1,5 +1,9 @@
 /*for phone*/
-@media screen and (max-width: 768px) {
+@media (max-width: 846px) {
+    .dpad {
+        top: 79.25%;
+    }
+
     .home {
         left: var(--sidebar-width);
         width: calc(100% - var(--sidebar-width));
@@ -10,7 +14,8 @@
         z-index: 100;
     }
 
-    .game-screen .dpad {
-        top: 50%;
+    .game-screen {
+        background: purple;
     }
+    
 }
