@@ -81,9 +81,10 @@
 .dpad {
     position: absolute;
     font-size: clamp(80px, 12vw, 190px);
-    left: 9%;
-    top: 68%;
+    left: 15%;
+    top: 82.25%;
     color: var(--game-border-color);
+    transform: translate(-50%, -50%);
 }
 
 .initial-buttons {
