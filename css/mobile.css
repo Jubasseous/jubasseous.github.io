@@ -10,7 +10,7 @@
         z-index: 100;
     }
 
-    .dpad {
-        top: 60%;
+    .game-screen .dpad {
+        top: 50%;
     }
 }

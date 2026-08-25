@@ -59,8 +59,8 @@
 }
 
 .game-screen {
-    /* align-items: center;
-    justify-content: center;*/
+     align-items: center;
+    justify-content: center;
     position: relative;
     box-sizing: border-box;
     width: 60%;
@@ -139,22 +139,21 @@
     transform: translate(-50%, -50%);
     opacity: 0.6;
 
+
 }
 
 .game-screen .name h1 {
     color: var(--text-color);
     font-size: clamp(2.5rem,calc(4.5vw - 1rem), 4.5rem);
     letter-spacing: 0.05em;
-   
-    white-space: nowrap;
+    width: 90%;
+    white-space: normal;
     text-align: center;
     justify-content: center;
     position: absolute;
-    
     overflow-wrap: break-word;
-
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
+    transition: var(--tran-03);
 }
