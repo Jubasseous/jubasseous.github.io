@@ -56,6 +56,8 @@
     height: 100%;
     transition: var(--tran-05);
     /*background-color: blue;*/
+    display: inline-block;
+   /* outline: 10px solid red;*/
 }
 
 .game-screen {
@@ -75,24 +77,27 @@
     transition: var(--tran-05);
 }
 
-
-
-.dpad {
-    position: absolute;
-    font-size: clamp(40px, 12vw, 280px);
-    left: 15%;
-    top: 82%;
-    color: var(--game-border-color);
-    line-height: 1;
-    transform: translate(-50%, -50%);
-}
-
 .initial-buttons {
     position: absolute;
     width: 5vw;
-    left: 82%;
-    top: 76%;
-    transform: scale(2);
+    left: 85%;
+    top: 80.25%;
+    transform: translate(-50%, -50%) scale(2.2);
+}
+
+.dpad {
+    position: absolute;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    font-display: block;
+    font-size: clamp(40px, 12vw, 280px);
+    text-align: center;
+    left: 15%;
+    top: 81%;
+    color: var(--game-border-color);
+    /*line-height: 1;*/
+    transform: translate(-50%, -50%);
 }
 
 .initial-buttons img,
@@ -102,13 +107,14 @@
     height: auto;
 }
 
+
 .pua {
     position: absolute;
     width: 5vw;
     opacity: 0.8;
     left: 87%;
     top: 18%;
-    transform: scale(8) rotate(-15deg);
+    transform: scale(3) rotate(-15deg);
 }
 
 .game-screen .text p {
