@@ -1,0 +1,16 @@
+/*for phone*/
+@media screen and (max-width: 768px) {
+    .home {
+        left: var(--sidebar-width);
+        width: calc(100% - var(--sidebar-width));
+        height: 85vh;
+    }
+
+    .sidebar {
+        z-index: 100;
+    }
+
+    .dpad {
+        top: 60%;
+    }
+}
