@@ -1,7 +1,7 @@
 /*for phone*/
 @media (max-width: 846px) {
     .dpad {
-        top: 79.25%;
+       /* top: 79.25%;*/
     }
 
     .home {
