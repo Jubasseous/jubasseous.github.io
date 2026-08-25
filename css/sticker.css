@@ -73,6 +73,7 @@
     background: var(--game-screen-color);
     box-shadow: 12px 12px 0 var(--text-color);
     transition: var(--tran-05);
+    background-color: red;
 }
 
 
@@ -120,7 +121,7 @@
     justify-content: center;
     left: 50%;
     top: 90%;
-    transform: translate(-50%, -90%);
+    transform: translate(-50%, -50%);
     opacity: 0.6;
 }
 
@@ -135,8 +136,9 @@
     justify-content: center;
     left: 50%;
     top: 10%;
-    transform: translate(-50%, -10%);
+    transform: translate(-50%, -50%);
     opacity: 0.6;
+
 }
 
 .game-screen .name h1 {
@@ -148,8 +150,11 @@
     text-align: center;
     justify-content: center;
     position: absolute;
-    top: 18%;
-    left: 25%;
-    transform: translateY(18%);
+    
+    overflow-wrap: break-word;
+
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     
 }

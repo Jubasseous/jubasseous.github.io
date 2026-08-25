@@ -26,69 +26,114 @@ body.dark {
     --text-color: #F1F0FF;
 }
 
-.typewriter {
+/*.typewriter {
     position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: break-word;
 }
 
 
 .game-screen .typewriter {
-    position: absolute;
+    position: absolute;*/
     /*top: 0%;
     left: 0%;
     transform: translate(0,0);*/
-    display: flex;
+    /*display: flex;
     justify-content: center;
     align-content: center;
-}
+}*/
 
 
 
-.typewriter h1 {
+/*.typewriter h1 {
     color: var(--text-color);
     font-family: "Poppins", sans-serif;
     font-size: clamp(16px, 4cqw, 30px);
     letter-spacing: 0.05em;
     margin-inline: auto;
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 1px solid;
-    animation: typing 3s steps(22) forwards, blink 1s step-end infinite;
+    overflow: hidden;*/
+    /*white-space: nowrap;*/
+    /*border-right: 1px solid;*/
+    /*animation: typing 3s steps(22) forwards, blink 1s step-end infinite;*/
+/*}*/
+
+/*.game-screen .typewriter.game-text p {
+    color: var(--text-color);
+    font-family: "Jersey10", sans-serif;
+    font-size: clamp(2rem, calc(4vw - 1rem), 4rem);
+    letter-spacing: 0.05em;
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    margin: 0;
+    width: 80%;
+    overflow: hidden;*/
+    /*border-right: 1px solid;*/
+/*}
+
+.game-screen .typewriter.game-text > div::after {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 1em;
+    background: var(--text-color);
+    margin-left: 3px;
+    vertical-align: -0.1em;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}*/
+
+
+.game-screen .typewriter.game-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 90%;
+    text-align: center;
+}
+
+.game-screen .typewriter.game-text > div {
+    display: inline;
 }
 
 .game-screen .typewriter.game-text p {
+    display: inline;
     color: var(--text-color);
     font-family: "Jersey10", sans-serif;
-    font-size: clamp(2rem,calc(4vw - 1rem), 4rem);
+    font-size: clamp(2rem, calc(4vw - 1rem), 4rem);
     letter-spacing: 0.05em;
-    margin-inline: auto;
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 1px solid;
-    animation: typing 3s steps(22) forwards, blink 1s step-end infinite;
-    align-content: center;
-    justify-content: center;
-
-    top: 60%;
-    transform: translateY(80%);
+    margin: 0;
 }
 
-@keyframes typing{
-    from{
-        width: 0;
-    }
-
-    to{
-        width: 100%;
-    }
+.game-screen .typewriter.game-text > div::after {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 2em;
+    background: var(--text-color);
+    margin-left: 3px;
+    vertical-align: -0.1em;
+    animation: blink 1s step-end infinite;
 }
 
-@keyframes blink{
-    50%{
-        border-color: transparent;
+@keyframes blink {
+    50% {
+        opacity: 0;
     }
 }

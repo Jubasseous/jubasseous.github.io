@@ -89,3 +89,22 @@ stickers.forEach(sticker => {
     //random animation delay
     sticker.style.animationDelay = `${Math.random()}s`;
 });
+
+
+/*typewriter*/
+const element = document.querySelector(".typewriter p");
+const text = element.textContent;
+
+element.textContent = "";
+
+let i = 0;
+
+function type() {
+    if (i < text.length) {
+        element.textContent += text[i];
+        i++;
+        setTimeout(type, 80);
+    }
+}
+
+type();
