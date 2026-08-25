@@ -73,3 +73,12 @@ body.dark{
     width: calc(100% - 108px);
 }
 
+
+.card{
+    width: 70%;
+    height: 200px;
+    background-color: lavender;
+    outline: 5px solid;
+    outline-color: var(--text-color);
+    border-radius: 20px;
+}

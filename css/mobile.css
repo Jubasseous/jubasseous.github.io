@@ -1,8 +1,5 @@
 /*for phone*/
 @media (max-width: 846px) {
-    .dpad {
-       /* top: 79.25%;*/
-    }
 
     .home {
         left: var(--sidebar-width);
@@ -14,8 +11,8 @@
         z-index: 100;
     }
 
-    .game-screen {
+    /*.game-screen {
         background: purple;
     }
-    
+    */
 }
