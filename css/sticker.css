@@ -13,6 +13,11 @@
     --game-adjustment: 90px;
 }
 
+body.dark {
+    --game-screen-color: #515836;
+
+}
+
 .stickers {
     position: absolute;
     inset: 0;
@@ -95,7 +100,7 @@
     text-align: center;
     left: 15%;
     top: 81%;
-    color: var(--game-border-color);
+    color: var(--text-color);
     /*line-height: 1;*/
     transform: translate(-50%, -50%);
 }

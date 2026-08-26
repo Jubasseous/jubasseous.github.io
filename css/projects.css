@@ -27,6 +27,7 @@
     --tran-03: all 0.3s ease;
     --tran-04: all 0.4s ease;
     --tran-05: all 0.5s ease;
+    --card-color: #E6E6FA;
 }
 
 
@@ -39,6 +40,7 @@ body {
 body.dark{
     --body-color: #181827;
     --background-color:#181827;
+    --card-color: #734F96;
     --purplegradient-color: #8B7CFF30;
     --slatebluegradient-color: #6A5ACD30;
     --sidebar-color: #252442;
@@ -91,11 +93,9 @@ body.dark{
     position: absolute;
     width: 50%;
     height: 20vw;
-
-    background-color: lavender;
+    background-color: var(--card-color);
     outline: 5px solid var(--text-color);
     border-radius: 20px;
-
     left: 75%;
     transform: translateX(-50%);
 }
@@ -122,6 +122,7 @@ body.dark{
 
 .card h2{
     position: absolute;
+    color: var(--text-color);
     font-size: clamp(12px, 2vw, 150px);
     text-decoration: underline;
     white-space: normal;
@@ -134,6 +135,8 @@ body.dark{
 
 .card p{
     position: absolute;
+    color: var(--text-color);
+
     font-size: clamp(10px, 1.25vw, 250px);
     width: 90%;
     white-space: normal;
