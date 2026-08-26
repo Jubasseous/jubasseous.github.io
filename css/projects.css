@@ -112,3 +112,13 @@ body.dark{
     top: 50%;
     transform: translate(-50%, -50%) scale(1);
 }
+
+.card h2{
+    position: absolute;
+    font-size: clamp(12px, 2vw, 150px);
+    text-decoration: underline;
+
+    top: 12%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
