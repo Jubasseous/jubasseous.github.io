@@ -116,6 +116,8 @@ body.dark{
 
 .card img:hover{
     top: 45%;
+    cursor: pointer;
+
 }
 
 .card h2{
