@@ -111,14 +111,32 @@ body.dark{
     left: -55%;
     top: 50%;
     transform: translate(-50%, -50%) scale(1);
+    transition: var(--tran-03);
+}
+
+.card img:hover{
+    top: 45%;
 }
 
 .card h2{
     position: absolute;
     font-size: clamp(12px, 2vw, 150px);
     text-decoration: underline;
+    white-space: normal;
+    overflow-wrap: break-word;
 
     top: 12%;
     left: 20%;
     transform: translate(-50%, -50%);
+}
+
+.card p{
+    position: absolute;
+    font-size: clamp(10px, 1.25vw, 250px);
+    width: 90%;
+    white-space: normal;
+    overflow-wrap: break-word;
+
+    transform: translate(5%, 95%);
+   /* outline: 1px solid red;*/
 }
