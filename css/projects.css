@@ -31,7 +31,7 @@
 
 
 body {
-    height: 100vh;
+    height: 100%;
     background: var(--body-color);
     transition: var(--tran-05);
 }
@@ -73,12 +73,42 @@ body.dark{
     width: calc(100% - 108px);
 }
 
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 90%;
+    height: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: var(--tran-05);
+    /*background-color: blue;*/
+    margin-top: 2%;
+}
 
-.card{
-    width: 70%;
-    height: 200px;
+.card {
+    position: absolute;
+    width: 50%;
+    height: 20vw;
+
     background-color: lavender;
-    outline: 5px solid;
-    outline-color: var(--text-color);
+    outline: 5px solid var(--text-color);
     border-radius: 20px;
+
+    left: 75%;
+    transform: translateX(-50%);
+}
+
+.card img {
+    position: absolute;
+    width: auto;
+    height: 20vw;
+
+    outline: 5px solid var(--text-color);
+    border-radius: 20px;
+
+    left: -55%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
 }
