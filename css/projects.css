@@ -86,7 +86,7 @@ body.dark{
     transform: translateX(-50%);
     transition: var(--tran-05);
     /*background-color: blue;*/
-    margin-top: 2%;
+    margin-top: 0%;
 }
 
 .card {
@@ -98,6 +98,7 @@ body.dark{
     border-radius: 20px;
     left: 75%;
     transform: translateX(-50%);
+    margin-top: 5%;
 }
 
 .card img {
@@ -144,4 +145,25 @@ body.dark{
 
     transform: translate(5%, 95%);
    /* outline: 1px solid red;*/
+}
+
+.skills {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(5px, 1vw, 12px);
+    top: 85%;
+    left: 10%;
+    transform: translate(-7%, -50%);
+    /*outline: 1px solid red;*/
+}
+
+.skill-tag {
+    padding: clamp(4px, 0.6vw, 8px) clamp(8px, 1.2vw, 16px);
+    font-size: clamp(10px, 1vw, 16px);
+    border-radius: 20px;
+    border: 2px solid var(--text-color);
+    background: var(--primary-color-light);
+    color: var(--text-color);
+    white-space: wrap;
 }

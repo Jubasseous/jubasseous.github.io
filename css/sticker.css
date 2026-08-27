@@ -60,7 +60,6 @@ body.dark {
     width: 100%;
     height: 100%;
     transition: var(--tran-05);
-    /*background-color: blue;*/
     display: inline-block;
    /* outline: 10px solid red;*/
 }
@@ -71,7 +70,7 @@ body.dark {
     position: relative;
     box-sizing: border-box;
     width: 60%;
-    height: 55%;
+    height: 50%;
     top: 20%;
     left: 20%;
     border: 8px solid var(--text-color);
@@ -85,8 +84,8 @@ body.dark {
 .initial-buttons {
     position: absolute;
     width: 5vw;
-    left: 85%;
-    top: 80.25%;
+    left: 83%;
+    top: 79%;
     transform: translate(-50%, -50%) scale(2.2);
 }
 
@@ -131,7 +130,7 @@ body.dark {
     position: absolute;
     justify-content: center;
     left: 50%;
-    top: 90%;
+    top: 80%;
     transform: translate(-50%, -50%);
     opacity: 0.6;
 }
