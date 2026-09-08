@@ -110,7 +110,7 @@ function type() {
 type();
 
 /*Card buttons*/
-const cardTicDecToe = document.querySelector(".TicDecToe");
+const cardTicDecToe = document.querySelector(".TicDecToe.card img");
 
 cardTicDecToe.addEventListener("click", () => {
     window.location.href = "ticdectoe.html";
