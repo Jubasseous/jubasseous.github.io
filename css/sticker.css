@@ -29,6 +29,7 @@ body.dark {
     height: auto;
 }
 
+
 .sticker {
     position: absolute;
     width: var(--size);
@@ -166,4 +167,12 @@ body.dark {
     left: 50%;
     transform: translate(-50%, -50%);
     transition: var(--tran-03);
+}
+
+body.dark .pua img {
+    content: url('../assets/PuaDark.png');
+}
+
+body.dark .initial-buttons img {
+    content: url('../assets/ButtonsDark.png');
 }
