@@ -31,7 +31,7 @@
 }
 
 
-/*body {
+/*body 
     height: 100%;
     background: var(--body-color);
     transition: var(--tran-05);
@@ -190,5 +190,41 @@ body.dark {
     white-space: wrap;
 }
 
+/*Tic-Dec-Toe*/
 
+.individual-project {
+    position: relative;
+    height: 100vh;
+    left: 270px;
+    width: calc(100% - 270px);
+    background-color: var(--background-color);
+    background-size: 40px 40px;
+    /*creates a grid, direction, then color and background color in between grids*/
+    /*background-image: linear-gradient(to right, var(--purplegradient-color) 1px, transparent 1px), linear-gradient(to bottom, var(--slatebluegradient-color) 1px, transparent 1px);*/
+    transition: var(--tran-05);
+}
+
+.main-pic {
+    position: relative;
+    width: 60%;
+    height: 30vw;
+    background-color: var(--card-color);
+    outline: 5px solid var(--text-color);
+    border-radius: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 3%;
+}
+
+.main-pic img {
+    position: relative;
+    width: auto;
+    height: 30vw;
+    outline: 5px solid var(--text-color);
+    border-radius: 20px;
+    left: -55%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: var(--tran-03);
+}
 
