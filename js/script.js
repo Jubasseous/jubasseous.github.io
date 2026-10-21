@@ -81,6 +81,7 @@ const pages = {
                         <span class="skill-tag">Custom Engine</span>
                         <span class="skill-tag">UI Programming</span>
                         <span class="skill-tag">Menu Systems</span>
+                        <span class="skill-tag">Gameplay Programming</span>
                     </div>
                 </li>
 

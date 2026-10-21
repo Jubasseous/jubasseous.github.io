@@ -943,24 +943,26 @@ body.dark {
 }*/
 
 
-.card img {
+.card {
     position: relative;
-    width: auto;
-    height: 20vw;
-
-    outline: 5px solid var(--text-color);
-    border-radius: 20px;
-
-    left: -55%;
-    top: 50%;
-    transform: translate(-50%, -50%) scale(1);
-    transition: var(--tran-03);
+    overflow: hidden;
 }
 
-.card img:hover{
-    top: 45%;
+.card img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    object-fit: cover;
+    object-position: center;
     cursor: pointer;
+    transition: top 0.2s ease;
+}
 
+.card img:hover {
+    top: 45%;
 }
 
 .card h2{
@@ -1224,18 +1226,22 @@ body:has(.sidebar.close) #app-content .individual-project {
     grid-row: 1 / span 3;
     display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
+    min-height: 0;
     max-height: 240px;
     aspect-ratio: 4 / 3;
-    object-fit: contain;
+    object-fit: cover;
+    object-position: center;
     outline: 3px solid var(--text-color);
     border-radius: 12px;
     transform: none;
+    transition: transform 0.2s ease;
 }
 
-#app-content .card img:hover {
-    top: auto;
-    transform: none;
+#app-content .card img:hover,
+#app-content .card > a img:hover {
+    transform: translateY(-5%);
+    cursor: pointer;
 }
 
 #app-content .card h2 {
@@ -1445,6 +1451,7 @@ body:has(.sidebar.close) #app-content .individual-project {
         padding: 14px;
         border-radius: 14px;
         outline-width: 3px;
+        padding: 20px 14px 14px;
     }
 
     #app-content .card img,
@@ -1455,7 +1462,7 @@ body:has(.sidebar.close) #app-content .individual-project {
         max-width: 100%;
         max-height: 230px;
         aspect-ratio: 16 / 9;
-        object-fit: contain;
+        object-fit: cover;
     }
 
     #app-content .card h2 {
@@ -1518,5 +1525,252 @@ body:has(.sidebar.close) #app-content .individual-project {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
+    }
+}
+
+
+/* Mobile: move navigation to the top */
+
+@media (max-width: 846px) {
+    .sidebar,
+    .sidebar.close {
+        position: fixed;
+        inset: 0 0 auto 0;
+        width: 100%;
+        height: 64px;
+        min-height: 64px;
+        box-sizing: border-box;
+        padding: 6px 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        overflow: hidden;
+        z-index: 1000;
+        border-radius: 0;
+    }
+
+    .sidebar .toggle {
+        display: none !important;
+    }
+
+    .sidebar header {
+        width: auto;
+        flex-shrink: 0;
+    }
+
+    .sidebar .image-text img {
+        position: static;
+        width: 42px;
+        height: 42px;
+        object-fit: contain;
+    }
+
+    .sidebar .logo-text,
+    .sidebar .text {
+        display: none !important;
+    }
+
+    .sidebar .menu-bar {
+        flex: 1;
+        min-width: 0;
+        width: auto;
+        height: auto;
+        margin: 0 0 0 12px;
+        overflow: hidden;
+    }
+
+    .sidebar .menu-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0;
+        padding: 0;
+    }
+
+    .sidebar li {
+        flex: 1;
+        min-width: 0;
+        height: 44px;
+        margin: 0;
+    }
+
+    .sidebar li .nav-link {
+        width: 100%;
+        height: 44px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sidebar li .icon {
+        min-width: 0;
+        width: auto;
+        margin: 0;
+        font-size: 22px;
+    }
+
+    .sidebar .menu-bar .mode {
+        display: none;
+    }
+}
+
+
+
+
+@media (max-width: 846px) {
+    /* Hide the sidebar expand/collapse arrow */
+    .sidebar .toggle {
+        display: none !important;
+    }
+
+    /* Keep the logo from squeezing the navigation */
+    .sidebar header {
+        width: auto;
+        margin: 0;
+        padding: 0;
+        flex-shrink: 0;
+    }
+
+    /* Align navigation icons horizontally */
+    .sidebar .menu-bar .menu-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .sidebar .menu-bar .nav-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        min-width: 44px;
+        padding: 0;
+    }
+
+    .sidebar .menu-bar .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 0;
+        width: 44px;
+        height: 44px;
+        margin: 0;
+    }
+
+    
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    #app-content {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        margin-left: 0 !important;
+        box-sizing: border-box;
+    }
+
+    #app-content > section,
+    #app-content .home,
+    #app-content .projects,
+    #app-content .individual-project {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        margin-left: 0 !important;
+        box-sizing: border-box;
+    }
+
+    #app-content .card {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+}
+
+
+@media (max-width: 846px) {
+    /* Make navigation icons bigger */
+    .sidebar .menu-links .icon {
+        font-size: 28px !important;
+        width: 100%;
+        min-width: 0;
+    }
+
+    /* Keep hover/active backgrounds inside each icon's slot */
+    .sidebar .menu-links li {
+        height: 52px;
+        border-radius: 12px;
+    }
+
+    .sidebar .menu-links .nav-link {
+        height: 52px;
+        border-radius: 12px;
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+
+    .sidebar .menu-links .nav-link:hover,
+    .sidebar .menu-links .nav-link:focus {
+        border-radius: 12px;
+    }
+
+    /* Center the main logo inside the top bar */
+     .sidebar header {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
+        padding: 0;
+        margin: 0;
+        flex: 0 0 48px;
+        overflow: visible;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sidebar header .image-text {
+        position: relative;
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: visible;
+    }
+
+    .sidebar header .image-text img {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        width: 40px;
+        height: 40px;
+        margin: 0;
+        transform: none;
+        object-fit: contain;
+        transform: translate( clamp(16px, 1vw, 20px), clamp(-4px, -0.4vw, -2px));
+    }
+
+    .sidebar .menu-links li:first-child,
+    .sidebar .menu-links li:first-child .nav-link {
+        height: 58px;
+        display: flex;
+        align-items: center;
     }
 }
