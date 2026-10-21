@@ -1,4 +1,4 @@
-/*dark and light mode*/
+﻿/*dark and light mode*/
 const body = document.querySelector("body"),
     sidebar = body.querySelector(".sidebar"),
     toggle = body.querySelector(".toggle"),
@@ -20,6 +20,218 @@ modeSwitch.addEventListener("click", () => {
         modeText.innerText = "Dark Mode";
     }
 });
+
+
+//for Single Application Page
+const app = document.getElementById("app-content");
+
+// All pages are rendered inside this one container.
+const pages = {
+    home: `
+        <section id="home" class="home">
+            <div class="text">jubasseous.exe</div>
+
+            <div class="exe-container">
+                <div class="game-screen">
+                    <div class="intro-text">
+                        <p>New Character Unlocked:</p>
+                    </div>
+
+                    <div class="name">
+                        <h1>Jubilee Garcia</h1>
+                    </div>
+
+                    <div class="typewriter game-text">
+                        <p>Game Developer » Technical Designer</p>
+                    </div>
+                </div>
+
+                <i class="bxf bx-joystick-button-alt icon dpad"></i>
+
+                <div class="initial-buttons">
+                    <img src="assets/Buttons.png" alt="Initial Buttons">
+                </div>
+
+                <div class="pua">
+                    <img src="assets/Pua.png" alt="Flower Sticker">
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <ul class="card-container">
+                <li class="TicDecToe card">
+                    <a href="#tic-dec-toe" data-route="tic-dec-toe">
+                        <img
+                            class="TicDecToe"
+                            src="assets/MenuAnimation.gif"
+                            alt="Tic-Dec-Toe Menu"
+                        >
+                        <h2>Tic-Dec-Toe</h2>
+                    </a>
+
+                    <p>
+                        Think you know Tic-Tac-Toe? Now throw in
+                        kindergarteners, a 4x4 grid, and cards with
+                        unique effects. What do you get? Tic-Dec-Toe!
+                    </p>
+
+                    <div class="skills">
+                        <span class="skill-tag">C/C++</span>
+                        <span class="skill-tag">Custom Engine</span>
+                        <span class="skill-tag">UI Programming</span>
+                        <span class="skill-tag">Menu Systems</span>
+                    </div>
+                </li>
+
+                <li class="HedgeMage card">
+                    <img
+                        class="HedgeMage"
+                        src="assets/TicDecToeMenu.png"
+                        alt="Hedge Mage"
+                    >
+
+                    <h2>Hedge Mage</h2>
+
+                    <p>
+                        A 2D puzzle adventure where a young wizard
+                        navigates a hedge maze with a single fireball.
+                    </p>
+
+                    <div class="skills">
+                        <span class="skill-tag">C/C++</span>
+                        <span class="skill-tag">Custom Engine</span>
+                        <span class="skill-tag">UI Programming</span>
+                        <span class="skill-tag">Physics Programming</span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    `,
+
+    projects: `
+        <section id="projects" class="projects">
+            <div class="text">Select a Project!</div>
+
+            <ul class="card-container">
+                <li class="TicDecToe card">
+                    <a href="#tic-dec-toe" data-route="tic-dec-toe">
+                        <img src="assets/MenuAnimation.gif"
+                             alt="Tic-Dec-Toe Menu">
+                        <h2>Tic-Dec-Toe</h2>
+                    </a>
+                    <p>
+                        A 4x4 twist on Tic-Tac-Toe featuring
+                        kindergarteners and cards with unique effects.
+                    </p>
+                </li>
+
+                <li class="HedgeMage card">
+                    <h2>Hedge Mage</h2>
+                    <p>
+                        A 2D puzzle adventure built with a custom engine.
+                    </p>
+                </li>
+            </ul>
+        </section>
+    `,
+
+    "tic-dec-toe": `
+        <section id="individual-project" class="individual-project">
+            <div class="text">Tic-Dec-Toe</div>
+
+            <div class="exe-container"></div>
+
+            <img
+                class="main-pic"
+                src="assets/TicDecToeMenu.png"
+                alt="Tic-Dec-Toe main menu"
+            >
+
+            <div class="project-description">
+                <h2>About the Project</h2>
+                <p>
+                    Tic-Dec-Toe is a freshman team project developed
+                    by five Computer Science students.
+                </p>
+
+                <h2>My Contributions</h2>
+                <p>
+                    I worked on UI/UX design and implementation for
+                    the menus, along with pixel art assets including
+                    playable characters and card designs.
+                </p>
+
+                <h2>Technologies</h2>
+                <div class="skills">
+                    <span class="skill-tag">C/C++</span>
+                    <span class="skill-tag">Custom Engine</span>
+                    <span class="skill-tag">UI Programming</span>
+                    <span class="skill-tag">Menu Systems</span>
+                </div>
+            </div>
+
+            <a href="#projects" data-route="projects">
+                ← Back to Projects
+            </a>
+        </section>
+    `,
+
+    blog: `
+        <section class="page">
+            <h1>Blog</h1>
+            <p>Coming soon!</p>
+        </section>
+    `,
+
+    about: `
+        <section class="page">
+            <h1>About Me</h1>
+            <p>Game Developer » Technical Designer</p>
+        </section>
+    `,
+
+    resume: `
+        <section class="page">
+            <h1>Resume</h1>
+            <p>Resume content coming soon!</p>
+        </section>
+    `,
+
+    contact: `
+        <section class="page">
+            <h1>Contact</h1>
+            <p>Contact information coming soon!</p>
+        </section>
+    `
+};
+
+function renderPage() {
+    // Read the page name from the URL, e.g. #tic-dec-toe
+    const route = window.location.hash.slice(1) || "home";
+
+    // Fall back to Home if the route doesn't exist.
+    app.innerHTML = pages[route] ?? pages.home;
+
+    // Mark the active sidebar link.
+    document.querySelectorAll(".menu-links a[data-route]")
+        .forEach(link => {
+            link.classList.toggle(
+                "active",
+                link.dataset.route === route
+            );
+        });
+
+    // Start the page at the top after switching views.
+    window.scrollTo(0, 0);
+}
+
+// Render when the URL changes, including Back/Forward navigation.
+window.addEventListener("hashchange", renderPage);
+
+// Render the initial view.
+renderPage();
+
 
 /*stickers coming in*/
 
@@ -115,3 +327,5 @@ const cardTicDecToe = document.querySelector(".TicDecToe.card img");
 cardTicDecToe.addEventListener("click", () => {
     window.location.href = "ticdectoe.html";
 });
+
+
