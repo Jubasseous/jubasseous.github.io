@@ -172,9 +172,6 @@ const pages = {
                 </div>
             </div>
 
-            <a href="#projects" data-route="projects">
-                ← Back to Projects
-            </a>
         </section>
     `,
 
@@ -323,10 +320,10 @@ function type() {
 type();
 
 /*Card buttons*/
-const cardTicDecToe = document.querySelector(".TicDecToe.card img");
+//const cardTicDecToe = document.querySelector(".TicDecToe.card img");
 
-cardTicDecToe.addEventListener("click", () => {
-    window.location.href = "ticdectoe.html";
-});
+//cardTicDecToe.addEventListener("click", () => {
+//    window.location.href = "ticdectoe.html";
+//});
 
 

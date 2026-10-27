@@ -1511,6 +1511,7 @@ body:has(.sidebar.close) #app-content .individual-project {
         margin-left: var(--sidebar-closedwidth);
     }
 
+
     #app-content .game-screen {
         width: 90%;
     }
@@ -1687,6 +1688,7 @@ body:has(.sidebar.close) #app-content .individual-project {
         margin-left: 0 !important;
         box-sizing: border-box;
     }
+
 
     #app-content .card {
         width: 100%;
