@@ -1530,151 +1530,19 @@ body:has(.sidebar.close) #app-content .individual-project {
 }
 
 
-/* Mobile: move navigation to the top */
+/* =====================================
+   MOBILE HAMBURGER SIDEBAR
+   Replaces the old horizontal mobile navigation.
+===================================== */
 
 @media (max-width: 846px) {
-    .sidebar,
-    .sidebar.close {
-        position: fixed;
-        inset: 0 0 auto 0;
-        width: 100%;
-        height: 64px;
-        min-height: 64px;
-        box-sizing: border-box;
-        padding: 6px 10px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        overflow: hidden;
-        z-index: 1000;
-        border-radius: 0;
-    }
 
-    .sidebar .toggle {
-        display: none !important;
-    }
-
-    .sidebar header {
-        width: auto;
-        flex-shrink: 0;
-    }
-
-    .sidebar .image-text img {
-        position: static;
-        width: 42px;
-        height: 42px;
-        object-fit: contain;
-    }
-
-    .sidebar .logo-text,
-    .sidebar .text {
-        display: none !important;
-    }
-
-    .sidebar .menu-bar {
-        flex: 1;
-        min-width: 0;
-        width: auto;
-        height: auto;
-        margin: 0 0 0 12px;
-        overflow: hidden;
-    }
-
-    .sidebar .menu-links {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        gap: 0;
-        padding: 0;
-    }
-
-    .sidebar li {
-        flex: 1;
-        min-width: 0;
-        height: 44px;
-        margin: 0;
-    }
-
-    .sidebar li .nav-link {
-        width: 100%;
-        height: 44px;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .sidebar li .icon {
-        min-width: 0;
-        width: auto;
-        margin: 0;
-        font-size: 22px;
-    }
-
-    .sidebar .menu-bar .mode {
-        display: none;
-    }
-}
-
-
-
-
-@media (max-width: 846px) {
-    /* Hide the sidebar expand/collapse arrow */
-    .sidebar .toggle {
-        display: none !important;
-    }
-
-    /* Keep the logo from squeezing the navigation */
-    .sidebar header {
-        width: auto;
-        margin: 0;
-        padding: 0;
-        flex-shrink: 0;
-    }
-
-    /* Align navigation icons horizontally */
-    .sidebar .menu-bar .menu-links {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        align-items: center;
-        gap: 8px;
-    }
-
-    .sidebar .menu-bar .nav-link {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 44px;
-        min-width: 44px;
-        padding: 0;
-    }
-
-    .sidebar .menu-bar .icon {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-width: 0;
-        width: 44px;
-        height: 44px;
-        margin: 0;
-    }
-
-    
-    html,
-    body {
-        width: 100%;
-        max-width: 100%;
-        overflow-x: hidden;
-    }
-
+    /* Keep page content below the top navigation. */
     #app-content {
+        padding-top: 65px;
+        margin-left: 0 !important;
         width: 100%;
         max-width: 100%;
-        min-width: 0;
-        margin-left: 0 !important;
         box-sizing: border-box;
     }
 
@@ -1682,97 +1550,277 @@ body:has(.sidebar.close) #app-content .individual-project {
     #app-content .home,
     #app-content .projects,
     #app-content .individual-project {
+        left: 0;
         width: 100%;
         max-width: 100%;
-        min-width: 0;
         margin-left: 0 !important;
         box-sizing: border-box;
     }
 
-
-    #app-content .card {
+    /* CLOSED: compact top bar */
+    .sidebar.close {
+        position: fixed;
+        top: 0;
+        left: 0;
         width: 100%;
-        max-width: 100%;
-        min-width: 0;
+        height: 65px;
+        min-height: 65px;
+        padding: 6px 16px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        overflow: visible;
         box-sizing: border-box;
+        z-index: 1000;
+        border-radius: 0;
     }
 
-}
-
-
-@media (max-width: 846px) {
-    /* Make navigation icons bigger */
-    .sidebar .menu-links .icon {
-        font-size: 28px !important;
-        width: 100%;
-        min-width: 0;
-    }
-
-    /* Keep hover/active backgrounds inside each icon's slot */
-    .sidebar .menu-links li {
-        height: 52px;
-        border-radius: 12px;
-    }
-
-    .sidebar .menu-links .nav-link {
-        height: 52px;
-        border-radius: 12px;
-        margin: 0;
-        padding: 0;
-        justify-content: center;
-        box-sizing: border-box;
-    }
-
-    .sidebar .menu-links .nav-link:hover,
-    .sidebar .menu-links .nav-link:focus {
-        border-radius: 12px;
-    }
-
-    /* Center the main logo inside the top bar */
-     .sidebar header {
+    .sidebar.close header {
         position: relative;
         top: auto;
         left: auto;
         right: auto;
-        width: 48px;
-        height: 48px;
-        min-width: 48px;
-        padding: 0;
+        width: 100%;
+        height: 100%;
+        min-width: 0;
         margin: 0;
-        flex: 0 0 48px;
-        overflow: visible;
+        padding: 0;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
+        flex: 1 1 auto;
+        overflow: visible;
     }
 
-    .sidebar header .image-text {
+    .sidebar.close .image-text {
         position: relative;
-        width: 48px;
+        width: auto;
         height: 48px;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         overflow: visible;
     }
 
-    .sidebar header .image-text img {
-        position: relative;
-        top: auto;
-        left: auto;
-        right: auto;
-        width: 40px;
-        height: 40px;
+    .sidebar.close .image-text img {
+        position: static;
+        width: 42px;
+        height: 42px;
         margin: 0;
         transform: none;
         object-fit: contain;
-        transform: translate( clamp(16px, 1vw, 20px), clamp(-4px, -0.4vw, -2px));
     }
 
-    .sidebar .menu-links li:first-child,
-    .sidebar .menu-links li:first-child .nav-link {
-        height: 58px;
+    .sidebar.close .logo-text {
+        display: none !important;
+    }
+
+    /* Hamburger button */
+    .sidebar .toggle {
+        position: absolute;
+        top: 50%;
+        right: 5px;
+        left: auto;
+        width: 44px;
+        height: 44px;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        transform: translateY(-50%);
+        border-radius: 8px;
+        background: transparent;
+        color: var(--text-color);
+        font-size: 0;
+        cursor: pointer;
+        z-index: 1002;
+    }
+
+    .sidebar .toggle::before {
+        content: "";
+        position: absolute;
+        width: 25px;
+        height: 2px;
+        background: var(--text-color);
+        box-shadow: 0 -7px 0 var(--text-color),
+                    0 7px 0 var(--text-color);
+    }
+
+    .sidebar .toggle::after {
+        content: none;
+    }
+
+    /* Hide the navigation while the top bar is closed. */
+    .sidebar.close .menu-bar {
+        display: none !important;
+    }
+
+    /* OPEN: vertical slide-out drawer */
+    .sidebar:not(.close) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: min(280px, 85vw);
+        height: 100vh;
+        height: 100dvh;
+        min-height: 100dvh;
+        padding: 12px 14px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        overflow-x: hidden;
+        overflow-y: auto;
+        box-sizing: border-box;
+        z-index: 1001;
+        border-radius: 0 16px 16px 0;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.35);
+    }
+
+    .sidebar:not(.close) header {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        width: 100%;
+        height: 65px;
+        min-width: 0;
+        margin: 0;
+        padding: 0;
+        flex: 0 0 65px;
         display: flex;
         align-items: center;
+        justify-content: flex-start;
+        overflow: visible;
+    }
+
+    .sidebar:not(.close) .image-text {
+        position: relative;
+        width: auto;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        overflow: visible;
+    }
+
+    .sidebar:not(.close) .image-text img {
+        position: static;
+        width: 48px;
+        height: 48px;
+        margin: 0;
+        transform: none;
+        object-fit: contain;
+    }
+
+    .sidebar:not(.close) .logo-text {
+        display: flex !important;
+    }
+
+    .sidebar:not(.close) .text {
+        display: block !important;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    /* Turn the hamburger into an X when the drawer is open. */
+    .sidebar:not(.close) .toggle::before {
+        width: 25px;
+        height: 2px;
+        background: var(--text-color);
+        transform: rotate(45deg);
+        box-shadow: none;
+    }
+
+    .sidebar:not(.close) .toggle::after {
+        content: "";
+        position: absolute;
+        width: 25px;
+        height: 2px;
+        background: var(--text-color);
+        transform: rotate(-45deg);
+    }
+
+    /* Vertical navigation links */
+    .sidebar:not(.close) .menu-bar {
+        display: flex !important;
+        flex: 1 1 auto;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        margin: 10px 0 0;
+        overflow: visible;
+    }
+
+    .sidebar:not(.close) .menu {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .sidebar:not(.close) .menu-links {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 8px;
+        width: 100%;
+        padding: 0;
+    }
+
+    .sidebar:not(.close) .menu-links li {
+        width: 100%;
+        height: 55px;
+        min-height: 55px;
+        margin: 0;
+        flex: 0 0 55px;
+    }
+
+    .sidebar:not(.close) .menu-links a {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        height: 55px;
+        padding: 0 8px;
+        gap: 8px;
+    }
+
+    .sidebar:not(.close) .menu-links .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 55px;
+        width: 55px;
+        height: 55px;
+        margin: 0;
+        font-size: 27px;
+    }
+
+    /* Dark/light mode at the bottom of the open drawer. */
+    .sidebar:not(.close) .bottom-content {
+        display: block;
+        width: 100%;
+    }
+
+    .sidebar:not(.close) .mode {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        min-height: 55px;
+    }
+
+    .sidebar:not(.close) .mode-text {
+        display: block !important;
+        margin-left: 12px;
+    }
+
+    .sidebar:not(.close) .toggle-switch {
+        position: relative;
+        right: auto;
+        display: flex !important;
+        min-width: 60px;
+        height: 55px;
     }
 }
