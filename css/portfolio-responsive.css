@@ -444,7 +444,7 @@ body.dark .switch::before{
 }
 
 .individual-project,
-.home {
+.home, .resume-page {
     position: relative;
     height: 65vh;
     left: var(--sidebar-width);
