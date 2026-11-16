@@ -444,7 +444,7 @@ body.dark .switch::before{
 }
 
 .individual-project,
-.home, .resume-page {
+.home {
     position: relative;
     height: 65vh;
     left: var(--sidebar-width);
@@ -1062,7 +1062,7 @@ body.dark {
 /* PDF Resume Viewer */
 .resume-page {
     min-height: 100vh;
-    background-image: linear-gradient(to right, var(--purplegradient-color) 1px, transparent 1px), linear-gradient(to bottom, var(--slatebluegradient-color) 1px, transparent 1px);
+    background-image: linear-gradient(to right, var(--purplegradient-color) 2px, transparent 1px), linear-gradient(to bottom, var(--slatebluegradient-color) 2px, transparent 1px);
     background-size: 40px 40px;
 }
 
