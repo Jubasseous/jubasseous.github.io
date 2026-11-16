@@ -191,7 +191,7 @@ const pages = {
 
     resume: `
     <section class="page resume-page">
-        <h1>Resume</h1>
+        <div class="text">Jubilee's Character Sheet...</div>
 
         <div class="pdf-viewer">
             <iframe
