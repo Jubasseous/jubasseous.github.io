@@ -190,11 +190,31 @@ const pages = {
     `,
 
     resume: `
-        <section class="page">
-            <h1>Resume</h1>
-            <p>Resume content coming soon!</p>
-        </section>
-    `,
+    <section class="page resume-page">
+        <h1>Resume</h1>
+
+        <div class="pdf-viewer">
+            <iframe
+                src="assets/Jubilee_Garcia_Resume.pdf"
+                title="Jubilee Garcia Resume"
+                loading="lazy">
+            </iframe>
+        </div>
+
+        <div class="pdf-download">
+            <a href="assets/Jubilee_Garcia_Resume.pdf"
+               target="_blank"
+               rel="noopener">
+                Open PDF in New Tab
+            </a>
+
+            <a href="assets/Jubilee_Garcia_Resume.pdf"
+               download="Jubilee-Garcia-Resume.pdf">
+                Download Resume
+            </a>
+        </div>
+    </section>
+`,
 
     contact: `
         <section class="page">
