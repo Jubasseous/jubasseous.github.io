@@ -140,40 +140,41 @@ const pages = {
     "tic-dec-toe": `
         <section id="individual-project" class="individual-project">
             <div class="text">Tic-Dec-Toe</div>
+            <div class="shortDesc">A 4x4 twist on Tic-Tac-Toe featuring kindergarteners and cards with unique effects.</div>
+            <div class="divider"></div>
+            <div class= "main-pic"><img src="assets/TicDecToeMenu.png" alt="Tic-Dec-Toe main menu"></div>
 
-            <div class="exe-container"></div>
 
-            <img
-                class="main-pic"
-                src="assets/TicDecToeMenu.png"
-                alt="Tic-Dec-Toe main menu"
-            >
+            
+           
 
-            <div class="project-description">
-                <h2>About the Project</h2>
-                <p>
-                    Tic-Dec-Toe is a freshman team project developed
-                    by five Computer Science students.
-                </p>
-
-                <h2>My Contributions</h2>
-                <p>
-                    I worked on UI/UX design and implementation for
-                    the menus, along with pixel art assets including
-                    playable characters and card designs.
-                </p>
-
-                <h2>Technologies</h2>
-                <div class="skills">
-                    <span class="skill-tag">C/C++</span>
-                    <span class="skill-tag">Custom Engine</span>
-                    <span class="skill-tag">UI Programming</span>
-                    <span class="skill-tag">Menu Systems</span>
-                </div>
-            </div>
+            
 
         </section>
     `,
+    /*<div class="exe-container"></div>*/
+    //< div class="project-description" >
+    //            <h2>About the Project</h2>
+    //            <p>
+    //                Tic-Dec-Toe is a freshman team project developed
+    //                by five Computer Science students.
+    //            </p>
+
+    //            <h2>My Contributions</h2>
+    //            <p>
+    //                I worked on UI/UX design and implementation for
+    //                the menus, along with pixel art assets including
+    //                playable characters and card designs.
+    //            </p>
+
+    //            <h2>Technologies</h2>
+    //            <div class="skills">
+    //                <span class="skill-tag">C/C++</span>
+    //                <span class="skill-tag">Custom Engine</span>
+    //                <span class="skill-tag">UI Programming</span>
+    //                <span class="skill-tag">Menu Systems</span>
+    //            </div>
+    //        </div >
 
     blog: `
         <section class="page">
