@@ -166,7 +166,7 @@ const pages = {
 
         <!-- Main Project Image -->
         <div class="main-pic">
-            <img src="assets/TicDecToeMenu.png"
+            <img src="assets/TicDecToeGameplay.png"
                  alt="Tic-Dec-Toe main menu">
         </div>
 
