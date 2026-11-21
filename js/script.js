@@ -141,38 +141,186 @@ const pages = {
         </section>
     `,
 
+    //"tic-dec-toe": `
+    //    <section id="individual-project" class="individual-project">
+    //        <div class="text">Tic-Dec-Toe</div>
+    //        <div class="shortDesc">A 4x4 twist on Tic-Tac-Toe featuring kindergarteners and cards with unique effects.</div>
+    //        <div class="divider"></div>
+    //        <div class= "main-pic"><img src="assets/TicDecToeMenu.png" alt="Tic-Dec-Toe main menu"></div>
+
+
+    //`,
+
     "tic-dec-toe": `
-        <section id="individual-project" class="individual-project">
-            <div class="text">Tic-Dec-Toe</div>
-            <div class="shortDesc">A 4x4 twist on Tic-Tac-Toe featuring kindergarteners and cards with unique effects.</div>
-            <div class="divider"></div>
-            <div class= "main-pic"><img src="assets/TicDecToeMenu.png" alt="Tic-Dec-Toe main menu"></div>
+    <section id="individual-project" class="individual-project">
 
+        <!-- Project Title -->
+        <div class="text">Tic-Dec-Toe</div>
 
-    `,
-    /*<div class="exe-container"></div>*/
-    //< div class="project-description" >
-    //            <h2>About the Project</h2>
-    //            <p>
-    //                Tic-Dec-Toe is a freshman team project developed
-    //                by five Computer Science students.
-    //            </p>
+        <div class="shortDesc">
+            A two-player twist on Tic-Tac-Toe featuring
+            kindergarteners and cards with unique effects.
+        </div>
 
-    //            <h2>My Contributions</h2>
-    //            <p>
-    //                I worked on UI/UX design and implementation for
-    //                the menus, along with pixel art assets including
-    //                playable characters and card designs.
-    //            </p>
+        <div class="divider"></div>
 
-    //            <h2>Technologies</h2>
-    //            <div class="skills">
-    //                <span class="skill-tag">C/C++</span>
-    //                <span class="skill-tag">Custom Engine</span>
-    //                <span class="skill-tag">UI Programming</span>
-    //                <span class="skill-tag">Menu Systems</span>
-    //            </div>
-    //        </div >
+        <!-- Main Project Image -->
+        <div class="main-pic">
+            <img src="assets/TicDecToeMenu.png"
+                 alt="Tic-Dec-Toe main menu">
+        </div>
+
+        <!-- Project Details -->
+        <div class="project-info">
+            <div class="project-stat">
+                <h3>ROLE</h3>
+                <p>Programmer & UI/UX Designer</p>
+            </div>
+
+            <div class="project-stat">
+                <h3>TEAM</h3>
+                <p>5 Computer Science Students</p>
+            </div>
+
+            <div class="project-stat">
+                <h3>DURATION</h3>
+                <p>One Semester</p>
+            </div>
+
+            <div class="project-stat">
+                <h3>TECHNOLOGY</h3>
+                <p>C++ / DigiPen Game Library</p>
+            </div>
+        </div>
+
+        <!-- Overview -->
+        <div class="project-section">
+            <h2>01 / Overview</h2>
+
+            <p>
+                Tic-Dec-Toe is a two-player competitive game
+                developed over the course of one semester
+                as part of a five-person team of Computer
+                Science students at DigiPen Institute of
+                Technology.
+            </p>
+
+            <p>
+                Putting a twist on the familiar game of
+                Tic-Tac-Toe, the game expands the traditional
+                3x3 board into a 4x4 grid. Players compete
+                against one another using cards with unique
+                effects, adding another layer of strategy
+                to the experience.
+            </p>
+
+            <p>
+                Featuring playful kindergarten-inspired
+                characters and colorful visuals, the game
+                puts a fun spin on a familiar classic.
+            </p>
+        </div>
+
+        <!-- My Contributions -->
+        <div class="project-section">
+            <h2>02 / My Contributions</h2>
+
+            <p>
+                I contributed to both the technical and
+                visual aspects of the project, focusing
+                primarily on programming and UI/UX design.
+            </p>
+
+            <div class="project-contributions">
+
+                <div class="contribution">
+                    <h3>UI/UX Development</h3>
+                    <p>
+                        Designed and implemented the game's
+                        menus and interface, focusing on
+                        intuitive navigation and a cohesive
+                        player experience.
+                    </p>
+                    <img src="assets/TicDecToeMenu.png"
+                         alt="Tic-Dec-Toe menu">
+                </div>
+
+                <div class="contribution">
+                    <h3>Programming</h3>
+                    <p>
+                        Used C++ and DigiPen's game
+                        development library to implement
+                        interactive interface elements
+                        and supporting game systems.
+                    </p>
+                </div>
+
+                <div class="contribution">
+                    <h3>Pixel Art & Visual Design</h3>
+                    <p>
+                        Created pixel art assets that
+                        contributed to the game's playful
+                        visual identity.
+                    </p>
+                </div>
+
+                <div class="contribution">
+                    <h3>Game Presentation</h3>
+                    <p>
+                        Implemented supporting screens,
+                        including the credits, to help
+                        complete the overall experience.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Development -->
+        <div class="project-section">
+            <h2>03 / Development Process</h2>
+
+            <p>
+                Developing a complete game within one
+                semester required collaboration and
+                coordination across a five-person team.
+                We worked together to bring the gameplay,
+                visuals, and interface into one cohesive
+                experience.
+            </p>
+
+            <p>
+                My work focused on connecting the technical
+                and visual sides of development, translating
+                interface designs into functional systems
+                while considering how players would interact
+                with the game.
+            </p>
+        </div>
+
+        <!-- Reflection -->
+        <div class="project-section">
+            <h2>04 / What I Learned</h2>
+
+            <p>
+                Tic-Dec-Toe was one of my first experiences
+                developing a complete game as part of a team.
+                It helped strengthen my foundation in C++
+                and introduced me to the importance of
+                designing interfaces alongside gameplay.
+            </p>
+
+            <p>
+                The project taught me that game development
+                extends beyond implementing mechanics.
+                The way players navigate, understand, and
+                interact with a game is equally important
+                to the overall experience.
+            </p>
+        </div>
+
+    </section>
+`,
 
     blog: `
         <section class="page">
