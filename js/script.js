@@ -189,7 +189,7 @@ const pages = {
 
             <div class="project-stat">
                 <h3>TECHNOLOGY</h3>
-                <p>C++ / DigiPen Game Library</p>
+                <p>C · C++ · DigiPen Game Library</p>
             </div>
         </div>
 
@@ -305,7 +305,7 @@ const pages = {
             <p>
                 Tic-Dec-Toe was one of my first experiences
                 developing a complete game as part of a team.
-                It helped strengthen my foundation in C++
+                It helped strengthen my foundation in C/C++
                 and introduced me to the importance of
                 designing interfaces alongside gameplay.
             </p>

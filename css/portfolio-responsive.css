@@ -1062,6 +1062,20 @@ body.dark {
     transition: var(--tran-03);
 }
 
+.individual-project {
+    --content-width: 80%;
+}
+
+.individual-project .project-section,
+.individual-project .project-info {
+    width: var(--content-width);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.individual-project .main-pic {
+    width: 60%;
+}
 
 /* PROJECT DESCRIPTION */
 .individual-project .shortDesc {
@@ -1099,21 +1113,22 @@ body.dark {
 /* CASE STUDY SECTIONS */
 .individual-project .project-section {
     width: 80%;
-    margin: 70px auto;
+    margin: 80px auto;
     color: var(--text-color);
 }
 
 .individual-project .project-section h2 {
     font-size: 32px;
-    margin-bottom: 25px;
     font-weight: 800;
+    margin-bottom: 25px;
 }
 
-.individual-project .project-section > p {
+.individual-project .project-section p {
+    width: 100%;
     font-size: 17px;
     line-height: 1.8;
-    margin-bottom: 20px;
-    max-width: 850px;
+    margin: 0 0 20px;
+    text-align: left;
 }
 
 /* CONTRIBUTION GRID */
@@ -1523,7 +1538,6 @@ body:has(.sidebar.close) #app-content .individual-project {
   width: 80%;
   margin: 60px auto;
   transform: none;
-  /*transform: translateX(6%);*/
 }
 
 #app-content .individual-project .main-pic {
