@@ -2016,3 +2016,22 @@ body:has(.sidebar.close) #app-content .individual-project {
         align-items: center;
     }
 }
+
+/* Disable nav link text interaction when sidebar is collapsed */
+.sidebar.close li .text {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+/* Remove the full-width focus outline */
+.sidebar li a:focus-visible {
+    outline: none;
+}
+
+/* Show keyboard focus around the icon instead */
+.sidebar li a:focus-visible .icon {
+    outline: 3px solid var(--text-color);
+    /*outline-offset: -5px;*/
+    border-radius: 8px;
+}

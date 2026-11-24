@@ -241,6 +241,7 @@ const pages = {
                         intuitive navigation and a cohesive
                         player experience.
                     </p>
+
                     <img src="assets/TicDecToeMenu.png"
                          alt="Tic-Dec-Toe menu">
                 </div>
