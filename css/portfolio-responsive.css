@@ -2036,3 +2036,13 @@ body:has(.sidebar.close) #app-content .individual-project {
     /*outline-offset: -5px;*/
     border-radius: 8px;
 }
+
+@media (max-width: 846px) {
+    #app-content > section,
+    #app-content .home,
+    #app-content .projects,
+    #app-content .individual-project,
+    #app-content .resume-page {
+        padding-top: 100px;
+    }
+}
